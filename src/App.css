@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: #E0ECF8;
+}
+
+.nav {
+  height: 5vh;
+  background-color: white;
+  width: 100%;
+}
+
+.nav-element {
+  display: inline-block;
+  padding-top: 1.25vh;
+  padding-bottom: 1.25vh;
+  background-color: white;
+  color: grey;
+  height: 2.5vh;
+  font-size: 15px;
+}
+
+
