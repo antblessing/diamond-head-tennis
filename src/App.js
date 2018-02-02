@@ -14,19 +14,16 @@ class App extends Component {
 class Nav extends Component {
   render() {
     return (
-    <div className="nav">
-      <div className="nav-element" style={{width: '80%',textAlign: 'left',color: 'orange'}}>Reserve Tennis Court</div>
-      <NavElement value="Home" size="5%"/>
-      <NavElement value="Log Out" size="7%"/>
-      <NavElement value="Account" size="5%"/>     
-    </div>
+    <nav>
+      <ul className="container">
+        <li className="reserve">Reserve Tennis Court</li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Log out</li>        
+      </ul>
+    </nav>
     );
   }
 }
-
-const NavElement = ({value, size}) =>
-  <div className="nav-element" style={{width: size}}>
-    {value}
-  </div>
 
 export default App;

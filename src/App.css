@@ -2,22 +2,50 @@
   text-align: center;
   height: 100vh;
   background-color: #E0ECF8;
+  display: flex;
+  flex-direction: column;
 }
 
-.nav {
-  height: 5vh;
+.container {
   background-color: white;
-  width: 100%;
+  display: flex;
+  padding: 0;
 }
 
-.nav-element {
-  display: inline-block;
-  padding-top: 1.25vh;
-  padding-bottom: 1.25vh;
-  background-color: white;
-  color: grey;
-  height: 2.5vh;
-  font-size: 15px;
+.container > li {
+  padding: 10px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.container >li.reserve {
+  text-align: left;
+  color: orange;
+}
+
+.reserve {
+  flex: 1;
+}
+
+
+@media all and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .container > li {
+    flex-basis: 50%;
+  }
+
+  .container >li.reserve {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .container > li {
+    flex-basis: 100%;
+  }
 }
 
 
