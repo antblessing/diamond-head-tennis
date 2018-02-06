@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import tennis from './tennis.png';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav/>
+        <Nav />
+        <Header />
+        <Body />
       </div>
     );
   }
@@ -25,5 +29,37 @@ class Nav extends Component {
     );
   }
 }
+
+class Body extends Component {
+  render() {
+    return (
+      <div className="body">
+      <div className="date">
+        <input type="date"></input>
+        <input type="submit" value="Check Courts"></input>
+      </div>
+      <div>
+        <img alt="courts" src={tennis} style={{width:"700px",height: "398px"}}/>
+      </div>
+      </div>
+    )
+  }
+}
+
+class Header extends Component {
+  render() {
+    return (
+      <div className="header">
+        <h1 className="headline">Diamond Hills Tennis</h1>
+        <Button> Open Courts </Button>
+        <Button> Open Matches </Button>
+        <Button> Find a friend </Button>
+      </div>
+    )
+  }
+}
+
+const Button = ({children}) => 
+  <button>{children}</button>
 
 export default App;

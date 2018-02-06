@@ -6,6 +6,40 @@
   flex-direction: column;
 }
 
+button {
+  padding: 16px 32px;
+  background-color: grey;
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.header {
+  background-color: white;
+  height: 30vh;
+  width: 95%;
+  align-self: center; 
+}
+
+.headline {
+  padding-top: 30px;
+  padding-bottom: 25px;
+  font-size: 45px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  padding: 10px;
+}
+
 .container {
   background-color: white;
   display: flex;
