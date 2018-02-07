@@ -34,13 +34,10 @@ class Body extends Component {
   render() {
     return (
       <div className="body">
-      <div className="date">
-        <input type="date"></input>
-        <input type="submit" value="Check Courts"></input>
-      </div>
-      <div>
-        <img alt="courts" src={tennis} style={{width:"700px",height: "398px"}}/>
-      </div>
+        <div className="date">
+          <input type="date"></input>
+          <input type="submit" value="Check Courts"></input>
+        </div>
       </div>
     )
   }
@@ -51,9 +48,11 @@ class Header extends Component {
     return (
       <div className="header">
         <h1 className="headline">Diamond Hills Tennis</h1>
-        <Button> Open Courts </Button>
-        <Button> Open Matches </Button>
-        <Button> Find a friend </Button>
+        <div className="button-container">
+          <Button> Open Courts </Button>
+          <Button> Open Matches </Button>
+          <Button> Find a friend </Button>
+        </div>
       </div>
     )
   }

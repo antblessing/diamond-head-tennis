@@ -52,7 +52,7 @@ button:hover {
   list-style-type: none;
 }
 
-.container >li.reserve {
+.container > li.reserve {
   text-align: left;
   color: orange;
 }
@@ -65,20 +65,30 @@ button:hover {
 @media all and (max-width: 600px) {
   .container {
     flex-wrap: wrap;
+    text-align: center;
   }
 
   .container > li {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 
-  .container >li.reserve {
+  .container > li.reserve {
     text-align: center;
+  }
+
+  .date {
+    padding-top: 25px;
   }
 }
 
 @media all and (max-width: 400px) {
   .container > li {
     flex-basis: 100%;
+    text-align: center;
+  }
+
+  .date {
+    padding-top: 125px;
   }
 }
 
