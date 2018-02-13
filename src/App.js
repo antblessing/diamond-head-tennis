@@ -38,6 +38,9 @@ class Body extends Component {
           <input type="date"></input>
           <input type="submit" value="Check Courts"></input>
         </div>
+        <div className="court">
+          <img alt="court" src={require('./court.svg')} style={{backgroundColor: 'red' ,height: '208px',width: '150px'}}></img>
+        </div>
       </div>
     )
   }

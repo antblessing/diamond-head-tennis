@@ -18,6 +18,12 @@ button:hover {
   cursor: pointer;
 }
 
+.court {
+  height: 512px;
+  width: 370px;
+  align-self: center;
+}
+
 .header {
   background-color: white;
   height: 30vh;
