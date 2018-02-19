@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  height: 100vh;
+  height: 200vh;
   background-color: #E0ECF8;
   display: flex;
   flex-direction: column;
@@ -19,9 +19,18 @@ button:hover {
 }
 
 .court {
-  height: 512px;
-  width: 370px;
+  height: 208px;
+  width: 150px;
   align-self: center;
+  padding: 5px;
+}
+
+.court-container {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  align-self: center;
+  flex-wrap: wrap;
 }
 
 .header {

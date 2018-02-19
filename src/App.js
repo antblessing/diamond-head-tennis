@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import tennis from './tennis.png';
 
 
 class App extends Component {
@@ -38,9 +37,25 @@ class Body extends Component {
           <input type="date"></input>
           <input type="submit" value="Check Courts"></input>
         </div>
-        <div className="court">
-          <img alt="court" src={require('./court.svg')} style={{backgroundColor: 'red' ,height: '208px',width: '150px'}}></img>
-        </div>
+        <div className="court-container">
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+          <Court />
+        </div>   
       </div>
     )
   }
@@ -63,5 +78,15 @@ class Header extends Component {
 
 const Button = ({children}) => 
   <button>{children}</button>
+
+const Court = () => 
+  <div className="court">
+    <img 
+      alt="court" 
+      src={require('./court.svg')} 
+      style={{backgroundColor: 'green' ,height: '208px',width: '150px'}}
+      onClick={() => alert("Open Court!")}>
+    </img>
+  </div>
 
 export default App;
