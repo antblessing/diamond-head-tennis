@@ -1,0 +1,12 @@
+.header {
+  background-color: white;
+  height: 30vh;
+  width: 95%;
+  align-self: center;
+}
+
+.headline {
+  padding-top: 30px;
+  padding-bottom: 25px;
+  font-size: 45px;
+}

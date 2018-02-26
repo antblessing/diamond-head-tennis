@@ -1,0 +1,50 @@
+.container {
+  background-color: white;
+  display: flex;
+  padding: 0;
+}
+
+.container > li {
+  padding: 10px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.container > li.reserve {
+  text-align: left;
+  color: orange;
+}
+
+.reserve {
+  flex: 1;
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .container > li {
+    flex-basis: 100%;
+  }
+
+  .container > li.reserve {
+    text-align: center;
+  }
+
+  .date {
+    padding-top: 25px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .container > li {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .date {
+    padding-top: 125px;
+  }
+}

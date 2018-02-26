@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Nav from './Components/Nav';
+import Header from './Components/Header';
 import './App.css';
 
 
@@ -10,21 +12,6 @@ class App extends Component {
         <Header />
         <Body />
       </div>
-    );
-  }
-}
-
-class Nav extends Component {
-  render() {
-    return (
-    <nav>
-      <ul className="container">
-        <li className="reserve">Reserve Tennis Court</li>
-        <li>Home</li>
-        <li>About</li>
-        <li>Log out</li>        
-      </ul>
-    </nav>
     );
   }
 }
@@ -55,35 +42,17 @@ class Body extends Component {
           <Court />
           <Court />
           <Court />
-        </div>   
-      </div>
-    )
-  }
-}
-
-class Header extends Component {
-  render() {
-    return (
-      <div className="header">
-        <h1 className="headline">Diamond Hills Tennis</h1>
-        <div className="button-container">
-          <Button> Open Courts </Button>
-          <Button> Open Matches </Button>
-          <Button> Find a friend </Button>
         </div>
       </div>
     )
   }
 }
 
-const Button = ({children}) => 
-  <button>{children}</button>
-
-const Court = () => 
+const Court = () =>
   <div className="court">
-    <img 
-      alt="court" 
-      src={require('./court.svg')} 
+    <img
+      alt="court"
+      src={require('./court.svg')}
       style={{backgroundColor: 'green' ,height: '208px',width: '150px'}}
       onClick={() => alert("Open Court!")}>
     </img>
