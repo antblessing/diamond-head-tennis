@@ -5,57 +5,81 @@ import './App.css';
 
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      courts: [{reserved: true},{reserved: false}]
+    };
+
+  }
+
   render() {
     return (
       <div className="App">
         <Nav />
         <Header />
-        <Body />
+        <Body
+          courts={this.state.courts}
+        />
       </div>
     );
   }
 }
 
 class Body extends Component {
+  constructor(props) {
+    super(props);
+
+    this.courts = props.courts;
+  }
+
+  renderCourt(i) {
+    let color = {backgroundColor: 'green'};
+
+    if (this.courts[i].reserved) {
+      color = {backgroundColor: 'red'}
+    }
+    return (
+      <Court
+        court={i}
+        reserved={this.courts[i].reserved}
+        style={color}
+      />
+    )
+  }
+
   render() {
+
     return (
       <div className="body">
-        <div className="date">
+        {/* <div className="date">
           <input type="date"></input>
           <input type="submit" value="Check Courts"></input>
-        </div>
+        </div> */}
         <div className="court-container">
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
-          <Court />
+          {this.renderCourt(0)}
+          {this.renderCourt(1)}
         </div>
       </div>
     )
   }
 }
 
-const Court = () =>
-  <div className="court">
-    <img
-      alt="court"
-      src={require('./court.svg')}
-      style={{backgroundColor: 'green' ,height: '208px',width: '150px'}}
-      onClick={() => alert("Open Court!")}>
-    </img>
-  </div>
+function Court(props) {
+  return (
+    <div className="court">
+      {props.court}
+      <img
+        alt="court"
+        src={require('./court.svg')}
+        onClick={() => alert("Open Court!")}
+        className="court-img"
+        style={props.style}>
+      </img>
+    </div>
+  );
+}
 
 export default App;

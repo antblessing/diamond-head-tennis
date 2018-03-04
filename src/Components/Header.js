@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import '../Styles/button.css';
+import Button from 'muicss/lib/react/button';
+import Container from 'muicss/lib/react/container';
 import '../Styles/header.css';
-
-const Button = ({children}) =>
-  <button>{children}</button>
 
 class Header extends Component {
   render() {
     return (
       <div className="header">
         <h1 className="headline">Diamond Hills Tennis</h1>
-        <div>
-          <Button> Open Courts </Button>
-          <Button> Open Matches </Button>
-          <Button> Find a friend </Button>
-        </div>
+        <Container>
+          <Button color="primary"> Open Courts </Button>
+          <Button color="primary"> Open Matches </Button>
+          <Button color="primary"> Find a friend </Button>
+        </Container>
       </div>
     )
   }
