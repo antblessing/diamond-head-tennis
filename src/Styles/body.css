@@ -1,0 +1,33 @@
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.court-container {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.court {
+  height: 260px;
+  width: 150px;
+  align-self: center;
+  padding: 5px;
+}
+
+.court-open {
+  background-color: green;
+}
+
+.court-reserved {
+  background-color: red;
+}
+
+.court-img {
+  height: 208px;
+  width: 150px;
+}
