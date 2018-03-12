@@ -11,7 +11,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      courts: [{reserved: true,players: ["Anthony"]},{reserved: false,players: []},{reserved: false,players: []}]
+      courts: [{reserved: false,players: ["Anthony"]},{reserved: false,players: []},{reserved: false,players: []}]
     };
 
   }
